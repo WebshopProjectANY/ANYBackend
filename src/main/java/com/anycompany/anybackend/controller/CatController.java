@@ -1,2 +1,4 @@
-package com.anycompany.anybackend.controller;public class CatController {
+package com.anycompany.anybackend.controller;
+
+public class CatController {
 }

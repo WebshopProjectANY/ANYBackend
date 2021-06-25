@@ -2,22 +2,22 @@ package com.anycompany.anybackend.model;
 
 
 public class Category {
-    private int categoryID;
+    private int categoryId;
     private String categoryName;
     private String categoryDescription;
 
-    public Category(int categoryID, String categoryName, String categoryDescription) {
-        this.categoryID = categoryID;
+    public Category(int categoryId, String categoryName, String categoryDescription) {
+        this.categoryId = categoryId;
         this.categoryName = categoryName;
         this.categoryDescription = categoryDescription;
     }
 
-    public int getCategoryID() {
-        return categoryID;
+    public int getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategoryID(int categoryID) {
-        this.categoryID = categoryID;
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getCategoryName() {

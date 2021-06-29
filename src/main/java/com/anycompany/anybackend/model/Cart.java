@@ -10,16 +10,16 @@ public class Cart {
     private double priceTotal;
     private Date dateOfOrder;
 
-    public Cart(User user, int userId, Product[] products, double priceTotal) {
+    public Cart(User user, Product[] products, double priceTotal) {
         this.user = user;
-        this.userId = userId;
+        this.userId = getUserId();
         this.products = products;
         this.priceTotal = priceTotal;
     }
 
-    public Cart(User user, int userId, Product[] products, String shippingAddress, double priceTotal, Date dateOfOrder) {
+    public Cart(User user, Product[] products, String shippingAddress, double priceTotal, Date dateOfOrder) {
         this.user = user;
-        this.userId = userId;
+        this.userId = getUserId();
         this.products = products;
         this.shippingAddress = shippingAddress;
         this.priceTotal = priceTotal;

@@ -1,6 +1,5 @@
 package com.anycompany.anybackend.controller;
 
-import com.anycompany.anybackend.model.Category;
 import com.anycompany.anybackend.model.Product;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,9 +9,15 @@ public class ProductController {
 
     @GetMapping("/products")
     public Product getProducts() {
-        // todo: return list of products
+        // todo: return list of all products
         return null;
     }
+
+/*    @GetMapping("/category/{categoryName}")
+    public Product getProductsOfCategory() {
+        // todo: return list of products for a specific category
+        return null;
+    }*/
 
     @PostMapping("/products/")
     public Product createProduct(@RequestBody Product product) {

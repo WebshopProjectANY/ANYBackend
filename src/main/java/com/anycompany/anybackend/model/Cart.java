@@ -1,26 +1,24 @@
 package com.anycompany.anybackend.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Cart {
-    private User user;
-    private int userId;
-    private Product[] products;
+    private final User user;
+    private ArrayList<Product> productList;
     private String shippingAddress;
     private double priceTotal;
     private Date dateOfOrder;
 
-    public Cart(User user, Product[] products, double priceTotal) {
+    public Cart(User user, ArrayList<Product> productList, double priceTotal) {
         this.user = user;
-        this.userId = getUserId();
-        this.products = products;
+        this.productList = productList;
         this.priceTotal = priceTotal;
     }
 
-    public Cart(User user, Product[] products, String shippingAddress, double priceTotal, Date dateOfOrder) {
+    public Cart(User user, ArrayList<Product> productList, String shippingAddress, double priceTotal, Date dateOfOrder) {
         this.user = user;
-        this.userId = getUserId();
-        this.products = products;
+        this.productList = productList;
         this.shippingAddress = shippingAddress;
         this.priceTotal = priceTotal;
         this.dateOfOrder = dateOfOrder;
@@ -42,12 +40,12 @@ public class Cart {
         this.userId = userId;
     }*/
 
-    public Product[] getProducts() {
-        return products;
+    public ArrayList<Product> getProductList() {
+        return productList;
     }
 
-    public void setProducts(Product[] products) {
-        this.products = products;
+    public void setProductList(ArrayList<Product> productList) {
+        this.productList = productList;
     }
 
     public String getShippingAddress() {

@@ -2,14 +2,14 @@ package com.anycompany.anybackend.model;
 
 public class Order {
     private final User user;
-    private Product[] articles;
-    private int amountArticles;
+    private Product[] products;
+    private int amountOfThisProduct;
     private int totalPrice;
 
-    public Order(User user, Product[] articles, int amountArticles, int totalPrice) {
+    public Order(User user, Product[] products, int amountOfThisProduct, int totalPrice) {
         this.user = user;
-        this.articles = articles;
-        this.amountArticles = amountArticles;
+        this.products = products;
+        this.amountOfThisProduct = amountOfThisProduct;
         this.totalPrice = totalPrice;
     }
 
@@ -17,20 +17,20 @@ public class Order {
         return user;
     }
 
-    public Product[] getArticles() {
-        return articles;
+    public Product[] getProducts() {
+        return products;
     }
 
-    public void setArticles(Product[] articles) {
-        this.articles = articles;
+    public void setProducts(Product[] products) {
+        this.products = products;
     }
 
-    public int getAmountArticles() {
-        return amountArticles;
+    public int getAmountOfThisProduct() {
+        return amountOfThisProduct;
     }
 
-    public void setAmountArticles(int amountArticles) {
-        this.amountArticles = amountArticles;
+    public void setAmountOfThisProduct(int amountOfThisProduct) {
+        this.amountOfThisProduct = amountOfThisProduct;
     }
 
     public int getTotalPrice() {

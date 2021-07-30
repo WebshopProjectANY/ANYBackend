@@ -1,5 +1,7 @@
 package com.anycompany.anybackend.model;
 
+// Gute Erholung Naëmi!
+
 import java.util.Date;
 
 public class User {

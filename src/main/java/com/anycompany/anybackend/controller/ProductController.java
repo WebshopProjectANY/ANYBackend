@@ -3,14 +3,22 @@ package com.anycompany.anybackend.controller;
 import com.anycompany.anybackend.model.Product;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
 public class ProductController {
 
 
     @GetMapping("/products")
-    public Product getProducts() {
-        // todo: return list of all products
-        return null;
+    // 19.11.21 - von Lukas gezeigt wie man in Controller (nicht richtig, sollte repository nutzen) Produkte returned
+    public List<Product> getProducts() {
+        ArrayList<Product> products = new ArrayList<>();
+        products.add(new Product("product1", 0, 12, "url", null, "test"));
+        products.add(new Product("product2", 1, 100, "url", null, "test2"));
+        products.add(new Product("product3", 2, 600, "url", null, "test2"));
+        // todo: return list of all products with actual database
+        return products;
     }
 
 /*    @GetMapping("/category/{categoryName}")
@@ -27,8 +35,9 @@ public class ProductController {
 
     @GetMapping("/products/{productId}")
     public Product getProductInfo(@PathVariable int productId) {
-        // todo: get info for a specific product
-        return null;
+        // 19.11.21 - von Lukas gezeigt wie man spezifische productId = List index bekommt
+        // todo: get info for a specific product from database/service
+        return getProducts().get(productId);
     }
 
     @PutMapping("/products/{productId}")
